@@ -1,0 +1,5 @@
+n1=input("informe o primeiro numero:")
+n2=input("informe o segundo numero:")
+soma = int (n1) + int (n2)
+# print ("a soma entre", n1, "e", n2, "equivale a", soma)
+print ("A soma entre {} e {} vale {}".format(n1, n2, soma))

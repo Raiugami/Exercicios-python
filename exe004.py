@@ -1,0 +1,6 @@
+n: str = (input("digite qualquer coisa:"))
+print("A informação digitada é do tipo", type(n))
+# print ("A informação digitada é um numero?", (n.isalnum))
+print("is a number?", n.isalnum())
+print("is a word?", n.isalpha())
+print ("is a real number?", n.isdecimal())
