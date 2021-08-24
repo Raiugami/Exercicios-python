@@ -19,16 +19,17 @@ while continuar != "N":
     # Já estamos com o login feito no whatsapp web
 
     def dados():
+        pessoa = (contatos_df.loc[i, "NOME"]).title()
         numero = contatos_df.loc[i, "TELEFONES"]
-        texto = urllib.parse.quote(mensagem)
+        texto = urllib.parse.quote(f'Olá _*{pessoa}*_!\n\n{mensagem}')
         link = f"https://web.whatsapp.com/send?phone={numero}&text={texto}"
         navegador.get(link)
-        time.sleep(10)
+        time.sleep(15)
 
     def esperar():
         while len(navegador.find_elements_by_id("side")) < 1:
             time.sleep(1)
-        time.sleep(5)
+        time.sleep(7)
 
     def condicao():
         if len(navegador.find_elements_by_xpath(
